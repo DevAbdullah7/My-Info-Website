@@ -1,0 +1,38 @@
+@media only screen and (max-width: 480px) {
+    .home .logo {
+        margin: 50px 0;
+    }
+    .home img {
+        width: 150px;
+    }
+    .home .homeContent {
+        overflow-x: scroll;
+    }
+    .home .homeContent::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        background: transparent;
+    }
+    .home .homeContent::-webkit-scrollbar-thumb {
+        width: 0;
+        height: 0;
+        background: transparent;
+    }
+    .home .homeContent::-webkit-scrollbar-track {
+        width: 0;
+        height: 0;
+        background: transparent;
+    }
+    .homeContent .homeCards {
+        flex-direction: column;
+    }
+    .homeContent .aboutMe, 
+    .homeContent .myServices {
+        width: 75%;
+        margin: 15px auto;
+    }
+    .homeContent .aboutMe .actionCallBtn a, 
+    .homeContent .myServices .actionCallBtn a {
+        width: 50%;
+    }
+}
