@@ -6,7 +6,6 @@
         width: 150px;
     }
     .home .homeContent {
-        overflow-x: scroll;
     }
     .home .homeContent::-webkit-scrollbar {
         width: 0;
