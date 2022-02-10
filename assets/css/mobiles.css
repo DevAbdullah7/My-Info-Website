@@ -33,7 +33,7 @@
     }
     .homeContent .aboutMe, 
     .homeContent .myServices {
-        width: 75%;
+        width: 85%;
         height: fit-content;
         margin: 15px auto;
     }
