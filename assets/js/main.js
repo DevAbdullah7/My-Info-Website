@@ -36,7 +36,7 @@ lang.onclick = function () {
 
 let Mood = document.querySelector('#Mood')
 if (window.localStorage.hasOwnProperty('Mood')) {
-    if (window.localStorage.lang === 'light') {
+    if (window.localStorage.Mood === 'light') {
         lightMood()
     } else {
         darkMood()
@@ -46,6 +46,7 @@ if (window.localStorage.hasOwnProperty('Mood')) {
 }
 function lightMood() {
     window.localStorage.setItem('Mood', 'light')
+    document.querySelector('body').style['backgroundColor'] = '#eee'
     document.querySelector('.nav').classList.remove('dark')
     document.querySelector('.nav').classList.add('light')
     document.querySelector('.content').classList.remove('dark')
@@ -53,6 +54,7 @@ function lightMood() {
 }
 function darkMood() {
     window.localStorage.setItem('Mood', 'dark')
+    document.querySelector('body').style['backgroundColor'] = '#222'
     document.querySelector('.nav').classList.add('dark')
     document.querySelector('.nav').classList.remove('light')
     document.querySelector('.content').classList.add('dark')

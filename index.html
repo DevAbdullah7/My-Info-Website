@@ -43,35 +43,18 @@
 <body>
     <div class="nav">
         <ul>
-            <li>
-                <a href="#contact">
-                    <div class="icon">
-                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+            <li id="lang">
+                <div class="icon">
+                    <ion-icon name="globe-outline"></ion-icon>
+                </div>
+                <div class="pageName">
+                    <div class="A">
+                        <p>العربية</p>
                     </div>
-                    <div class="pageName">
-                        <div class="A">
-                            <p>مراسلة</p>
-                        </div>
-                        <div class="E">
-                            <p>Messege</p>
-                        </div>
+                    <div class="E">
+                        <p>English</p>
                     </div>
-                </a>
-            </li>
-            <li>
-                <a href="#profile">
-                    <div class="icon">
-                        <ion-icon name="person-add-outline"></ion-icon>
-                    </div>
-                    <div class="pageName">
-                        <div class="A">
-                            <p>التواصل</p>
-                        </div>
-                        <div class="E">
-                            <p>Profile</p>
-                        </div>
-                    </div>
-                </a>
+                </div>
             </li>
             <li>
                 <a href="#home" class="active">
@@ -116,26 +99,14 @@
                     </div>
                 </div>
             </li>
-            <li id="lang">
-                <div class="icon">
-                    <ion-icon name="globe-outline"></ion-icon>
-                </div>
-                <div class="pageName">
-                    <div class="A">
-                        <p>العربية</p>
-                    </div>
-                    <div class="E">
-                        <p>English</p>
-                    </div>
-                </div>
-            </li>
             <div id="indicator" class="active2"></div>
         </ul>
     </div>
     <div class="content">
         <div class="home">
             <div class="logo">
-                <img src="./assets/img/myLogo.png" alt="">
+                <img class="light" src="./assets/img/myLogo1.png" alt="">
+                <img class="dark" src="./assets/img/myLogo1White.png" alt="">
                 <span></span>
             </div>
             <div class="homeContent">
@@ -143,156 +114,220 @@
                     <div class="aboutMe">
                         <div class="personalityInfo E">
                             <h1>About Me :</h1>
-                            <div class="row">
-                                <div class="icon">
-                                    <ion-icon name="person-outline"></ion-icon>
+                            <div class="personalityInfoContent">
+                                <div class="demoInfo">
+                                    <div class="row">
+                                        <div class="icon">
+                                            <ion-icon name="person-outline"></ion-icon>
+                                        </div>
+                                        <div class="text">
+                                            Abdullah Alqahtani
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="icon">
+                                            <ion-icon name="location-outline"></ion-icon>
+                                        </div>
+                                        <div class="text">
+                                            Jeddah, Saudia Arabia
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="icon">
+                                            <ion-icon name="desktop-outline"></ion-icon>
+                                        </div>
+                                        <div class="text">
+                                            Front-End Developer
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="icon">
+                                            <ion-icon name="color-palette-outline"></ion-icon>
+                                        </div>
+                                        <div class="text">
+                                            Ui/Ux Designer
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    Abdullah Alqahtani
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="icon">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                </div>
-                                <div class="text">
-                                    Jeddah, Saudia Arabia
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="icon">
-                                    <ion-icon name="briefcase-outline"></ion-icon>
-                                </div>
-                                <div class="text">
-                                    Front-End Developer
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="icon">
-                                    <ion-icon name="color-palette-outline"></ion-icon>
-                                </div>
-                                <div class="text">
-                                    Ui/Ux Designer
+                                <div class="textSection">
+                                    <p>
+                                        I started learning programming in 2019. <br>
+                                        By learn Python as an introduction to programming, <br>
+                                        Then I started learning user experience design, <br>
+                                        To move up to web programming by learning the Front-End development, <br>
+                                        I aspire to complete my journey to become a Full-Stack web developer.
+                                    </p>
                                 </div>
                             </div>
                             <div class="actionCallBtn">
-                                <a href="#"><p>My CV</p></a>
+                                <a class="whatsApp" href="https://wa.link/nsnkqb" target="blanck"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                                <a href="https://www.linkedin.com/in/abdullah-alqahtani-190441220/" target="blanck">
+                                    <img class="light" src="./assets/img/icons/linkedin-in-brands.svg" alt="">
+                                    <img class="dark" src="./assets/img/icons/linkedin-in-brandsWhite.svg" alt="">
+                                </a>
+                                <a href="mailto:info@abdullah-alqahtani.me" target="blanck"><ion-icon name="mail-outline"></ion-icon></a>
                             </div>
                         </div>
                         <div class="personalityInfo A">
                             <h1>من انا :</h1>
-                            <div class="row">
-                                <div class="icon">
-                                    <ion-icon name="person-outline"></ion-icon>
+                            <div class="personalityInfoContent">
+                                <div class="demoInfo">
+                                    <div class="row">
+                                        <div class="icon">
+                                            <ion-icon name="person-outline"></ion-icon>
+                                        </div>
+                                        <div class="text">
+                                            عبدالله القحطاني
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="icon">
+                                            <ion-icon name="desktop-outline"></ion-icon>
+                                        </div>
+                                        <div class="text">
+                                            <p>مبرمج واجهات المواقع الالكترونية</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="icon">
+                                            <ion-icon name="color-palette-outline"></ion-icon>
+                                        </div>
+                                        <div class="text">
+                                            مصمم Ui/Ux
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="icon">
+                                            <ion-icon name="code-slash-outline"></ion-icon>
+                                        </div>
+                                        <div class="text">
+                                            <p>مبرمج بايثون</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    عبدالله القحطاني
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="icon">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                </div>
-                                <div class="text">
-                                    جدة، المملكة العربية السعودية
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="icon">
-                                    <ion-icon name="briefcase-outline"></ion-icon>
-                                </div>
-                                <div class="text">
-                                    مبرمج واجهات المواقع الالكترونية
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="icon">
-                                    <ion-icon name="color-palette-outline"></ion-icon>
-                                </div>
-                                <div class="text">
-                                    مصمم Ui/Ux
+                                <div class="textSection">
+                                    <p>
+                                        بدأت بتعلم البرمجة عام ٢٠١٩ <br>
+                                        بتعلمي لغة البايثون كمدخل للبرمجة <br>
+                                        ثم بدأت بتعلم تصميم تجربة المستخدم <br>
+                                        للانتقال الى برمجة الويب عبر تعلمي مسار الفرونت اند <br>
+                                        واطمح الى اكمال رحلتي حتى اصبح مبرمج ويب فل ستاك.
+                                    </p>
                                 </div>
                             </div>
                             <div class="actionCallBtn">
-                                <a href="#"><p>الـCV الخاص بي</p></a>
+                                <a class="whatsApp" href="https://wa.link/nsnkqb" target="blanck"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                                <a href="https://www.linkedin.com/in/abdullah-alqahtani-190441220/" target="blanck">
+                                    <img class="light" src="./assets/img/icons/linkedin-in-brands.svg" alt="">
+                                    <img class="dark" src="./assets/img/icons/linkedin-in-brandsWhite.svg" alt="">
+                                </a>
+                                <a href="mailto:info@abdullah-alqahtani.me" target="blanck"><ion-icon name="mail-outline"></ion-icon></a>
                             </div>
                         </div>
                     </div>
                     <div class="myServices">
                         <div class="personalityInfo E">
                             <h1>My Services :</h1>
-                            <div class="row">
-                                <div class="icon">
-                                    <ion-icon name="checkbox-outline"></ion-icon>
+                            <div class="personalityInfoContent">
+                                <div class="demoInfo">
+                                    <div class="row">
+                                        <div class="icon">
+                                            <ion-icon name="checkbox-outline"></ion-icon>
+                                        </div>
+                                        <div class="text">
+                                            Front-End Designing and Development
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="icon">
+                                            <ion-icon name="checkbox-outline"></ion-icon>
+                                        </div>
+                                        <div class="text">
+                                            Web Apps Development
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="icon">
+                                            <ion-icon name="checkbox-outline"></ion-icon>
+                                        </div>
+                                        <div class="text">
+                                            Python Scripts Development
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="icon">
+                                            <ion-icon name="checkbox-outline"></ion-icon>
+                                        </div>
+                                        <div class="text">
+                                            Tech Content Writing
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    Front-End Designing and Development
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="icon">
-                                    <ion-icon name="checkbox-outline"></ion-icon>
-                                </div>
-                                <div class="text">
-                                    Web Apps Development
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="icon">
-                                    <ion-icon name="checkbox-outline"></ion-icon>
-                                </div>
-                                <div class="text">
-                                    Python Scripts Development
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="icon">
-                                    <ion-icon name="checkbox-outline"></ion-icon>
-                                </div>
-                                <div class="text">
-                                    Tech Content Writing
+                                <div class="textSection">
+                                    <p>
+                                        I provide a web interfaces development, smoothly, simply, and can be development in the future. <br>
+                                        I am programming a simple and useful web applications to provide various services. <br>
+                                        I am making Python scripts to complete some tasks. <br>
+                                        I offer tutorials and technical advice.
+                                    </p>
                                 </div>
                             </div>
                             <div class="actionCallBtn">
-                                <a href="#"><p>My Website</p></a>
+                                <a href="https://Abdullah-Alqahtani.net" target="blanck"><ion-icon name="globe-outline"></ion-icon></a>
+                                <a href="https://twitter.com/igreato1" target="blanck" class="twitter"><ion-icon name="logo-twitter"></ion-icon></a>
+                                <a href="https://github.com/iGreato1" target="blanck"><ion-icon name="logo-github"></ion-icon></a>
                             </div>
                         </div>
                         <div class="personalityInfo A">
                             <h1>خدماتي :</h1>
-                            <div class="row">
-                                <div class="icon">
-                                    <ion-icon name="checkbox-outline"></ion-icon>
+                            <div class="personalityInfoContent">
+                                <div class="demoInfo">
+                                    <div class="row">
+                                        <div class="icon">
+                                            <ion-icon name="checkbox-outline"></ion-icon>
+                                        </div>
+                                        <div class="text">
+                                            تصميم وبرمجة واجهات المواقع الالكترونية
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="icon">
+                                            <ion-icon name="checkbox-outline"></ion-icon>
+                                        </div>
+                                        <div class="text">
+                                            برمجة تطبيقات ويب
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="icon">
+                                            <ion-icon name="checkbox-outline"></ion-icon>
+                                        </div>
+                                        <div class="text">
+                                            برمجة سكربتات بايثون
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="icon">
+                                            <ion-icon name="checkbox-outline"></ion-icon>
+                                        </div>
+                                        <div class="text">
+                                            تقديم محتوى تقني
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    تصميم وبرمجة واجهات المواقع الالكترونية
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="icon">
-                                    <ion-icon name="checkbox-outline"></ion-icon>
-                                </div>
-                                <div class="text">
-                                    برمجة تطبيقات ويب
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="icon">
-                                    <ion-icon name="checkbox-outline"></ion-icon>
-                                </div>
-                                <div class="text">
-                                    برمجة سكربتات بايثون
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="icon">
-                                    <ion-icon name="checkbox-outline"></ion-icon>
-                                </div>
-                                <div class="text">
-                                    تقديم محتوى تقني
+                                <div class="textSection">
+                                    <p>
+                                        اقدم خدمة برمجة واجهات المواقع بشكل سلس وبسيط وقابل للتطوير مستقبلاً <br>
+                                        اقوم ببرمجة تطبيقات ويب بسيطة وهادفة لتقديم خدمات متنوعة <br>
+                                        اقوم بصنع سكريبتات بايثون لاتمام بعض المهام <br>
+                                        اقدم شروحات ونصائح تقنية.
+                                    </p>
                                 </div>
                             </div>
                             <div class="actionCallBtn">
-                                <a href="#"><p>موقعي الشخصي</p></a>
+                                <a href="abdullah-alqahtani.net" target="blanck"><ion-icon name="globe-outline"></ion-icon></a>
+                                <a href="https://twitter.com/igreato1" target="blanck" class="twitter"><ion-icon name="logo-twitter"></ion-icon></a>
+                                <a href="https://github.com/iGreato1" target="blanck"><ion-icon name="logo-github"></ion-icon></a>
                             </div>
                         </div>
                     </div>

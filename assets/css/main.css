@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Tajawal:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @font-face {
     font-family: 'englishFont';
     src: url('../fonts/ARCENA.ttf');
@@ -7,6 +8,9 @@
 }
 .A {
     font-family: 'Tajawal';
+}
+.E {
+    font-family: 'Ubuntu';
 }
 * {
     margin: 0;
@@ -25,8 +29,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #eee;
     overflow: hidden;
+    transition: 0.5s;
 }
 
 /* Nav Section */
@@ -41,6 +45,10 @@ body {
     border-radius: 10px;
     background-color: #fff;
     z-index: 1000;
+    transition: 0.5s;
+}
+.nav.dark {
+    background-color: #333;
 }
 .nav::after {
     position: absolute;
@@ -50,6 +58,10 @@ body {
     top: -10px;
     background-color: #eee;
     z-index: -1;
+    transition: 0.5s;
+}
+.nav.dark::after {
+    background-color: #222;
 }
 .nav ul {
     width: 95vw;
@@ -82,6 +94,10 @@ body {
     text-align: center;
     transition: 0.5s;
     color: #333;
+    transition: 0.5s;
+}
+.nav.dark ul li .icon {
+    color: #eee;
 }
 .nav.English ul li .pageName .A {
     display: none;
@@ -96,9 +112,6 @@ body {
 .nav.dark ul li#Mood .icon .lightMood, 
 .nav.dark ul li#Mood .pageName .lightMood {
     display: none;
-}
-.nav ul li .pageName .E {
-    font-family: 'englishFont';
 }
 
 .nav ul a.active .icon {
@@ -118,6 +131,10 @@ body {
     border: 5px solid #eee;
     transition: 0.5s;
 }
+.nav.dark #indicator {
+    background-color: #333;
+    border: 5px solid #222;
+}
 .nav #indicator::before {
     position: absolute;
     content: '';
@@ -128,6 +145,10 @@ body {
     background: transparent;
     border-top-right-radius: 20px;
     box-shadow: 0px -10px 0 0 #eee;
+    transition: 0.5s;
+}
+.nav.dark #indicator::before {
+    box-shadow: 0px -10px 0 0 #222;
 }
 .nav #indicator::after {
     position: absolute;
@@ -139,6 +160,10 @@ body {
     background: transparent;
     border-top-left-radius: 20px;
     box-shadow: 0px -10px 0 0 #eee;
+    transition: 0.5s;
+}
+.nav.dark #indicator::after {
+    box-shadow: 0px -10px 0 0 #222;
 }
 .nav.Arabic #indicator.active2 {
     transform: translateX(calc((95vw / 5) * 0));
@@ -168,6 +193,9 @@ body {
     transition: 0.5s;
     opacity: 0;
 }
+.nav.dark ul li .pageName {
+    color: #eee;
+}
 .nav ul a.active .pageName {
     opacity: 1;
     transform: translateY(17.5px);
@@ -178,46 +206,69 @@ body {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    overflow-y: scroll;
+    transition: 0.5s;
 }
 .home {
     width: 100%;
-    min-height: 150vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    overflow-x: hidden;
 }
 .home .logo {
     position: relative;
-    width: auto;
-    margin: 75px 0px 50px;
+    width: 175px;
+    height: 175px;
+    margin: 50px 0px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.home img {
-    width: 200px;
+.home .logo img {
+    width: 170px;
+    transform: translateY(-7.5px);
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.15));
+    transition: 0.5s;
 }
-.logo span {
+.home .logo img.dark {
+    display: none;
+}
+.content.dark .home .logo img {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.15));
+}
+.content.dark .home .logo img.light {
+    display: none;
+}
+.content.dark .home .logo img.dark {
+    display: block;
+}
+.content .logo span {
     position: absolute;
     width: 90%;
     height: 90%;
     top: 5%;
     border-radius: 25px;
     border: 2px solid rgb(3 3 3 / 15%);
-    box-shadow: -10px 10px 10px -5px rgb(3 3 3 / 15%) inset,
-        -10px 10px 10px -5px rgb(3 3 3 / 15%);
+    box-shadow: -5px 10px 10px -5px rgb(3 3 3 / 10%) inset,
+        -5px 10px 10px -5px rgb(3 3 3 / 15%);
     transform: rotate(45deg);
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.05);
     transition: 0.5s;
-    z-index: -1;
+    /* z-index: -1; */
 }
 .content.English .logo span {
-    box-shadow: 10px -10px 10px -5px rgb(3 3 3 / 15%) inset,
-        10px -10px 10px -5px rgb(3 3 3 / 15%);
+    box-shadow: 5px -10px 10px -5px rgb(3 3 3 / 10%) inset,
+        5px -10px 10px -5px rgb(3 3 3 / 15%);
+}
+.content.dark .logo span {
+    border: 2px solid rgb(238 238 238 / 15%);
+    box-shadow: -5px 10px 10px -5px rgb(255, 255, 255, 0.05) inset,
+        -5px 10px 10px -5px rgb(238 238 238 / 10%);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+.content.English.dark .logo span {
+    box-shadow: 5px -10px 10px -5px rgb(255, 255, 255, 0.05) inset,
+        5px -10px 10px -5px rgb(238 238 238 / 10%);
 }
 .home .homeContent {
     position: relative;
@@ -225,25 +276,32 @@ body {
 }
 .homeContent .aboutMe,
 .homeContent .myServices {
+    position: relative;
     width: 45%;
-    height: auto;
+    height: 45vh;
     padding: 10px;
     border-radius: 15px;
     border: 1px solid rgb(3 3 3 / 15%);
-    box-shadow: -10px 10px 10px -5px rgb(3 3 3 / 15%);
+    box-shadow: -5px 10px 10px -5px rgb(3 3 3 / 15%);
     background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+}
+
+.content.dark .homeContent .aboutMe,
+.content.dark .homeContent .myServices {
+    border: 1px solid rgb(238 238 238 / 15%);
+    box-shadow: -5px 10px 10px -5px rgb(238 238 238 / 15%);
+    background-color: rgba(238, 238, 238, 0.02);
 }
 .homeContent .homeCards {
     width: 100%;
-    height: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    overflow: hidden;
 }
 .content.English .homeContent .aboutMe,
 .content.English .homeContent .myServices {
-    box-shadow: 10px 10px 10px -5px rgb(3 3 3 / 15%);
+    box-shadow: 5px 10px 10px -5px rgb(3 3 3 / 15%);
 }
 .content.Arabic .homeContent .personalityInfo.E {
     display: none;
@@ -256,9 +314,36 @@ body {
     text-align: center;
     font-size: 1.25em;
     margin: 5px 0 15px;
+    transition: 0.5s;
 }
-.homeContent .aboutMe .row,
-.homeContent .myServices .row {
+.content.dark .homeContent .aboutMe h1,
+.content.dark .homeContent .myServices h1 {
+    color: #eee;
+}
+.homeContent .aboutMe .personalityInfoContent,
+.homeContent .myServices .personalityInfoContent {
+    width: 100%;
+    display: flex;
+}
+.aboutMe .personalityInfoContent .demoInfo,
+.myServices .personalityInfoContent .demoInfo {
+    width: 75%;
+    transition: 0.5s;
+}
+.aboutMe .personalityInfoContent .textSection,
+.myServices .personalityInfoContent .textSection {
+    font-size: 1em;
+    line-height: 1.4;
+    transition: 0.5s;
+}
+.content.dark .aboutMe .personalityInfoContent .demoInfo,
+.content.dark .myServices .personalityInfoContent .demoInfo,
+.content.dark .aboutMe .personalityInfoContent .textSection,
+.content.dark .myServices .personalityInfoContent .textSection {
+    color: #eee;
+}
+.aboutMe .demoInfo .row,
+.myServices .demoInfo .row {
     display: flex;
     align-items: center;
     margin: 10px 0;
@@ -271,28 +356,60 @@ body {
     justify-content: center;
     align-items: center;
     filter: drop-shadow(0 0 2.5px rgba(0, 0, 0, 0.25));
+    transition: 0.5s;
+}
+.content.dark .homeContent .aboutMe .icon,
+.content.dark .homeContent .myServices .icon,
+.content.dark .homeContent .aboutMe .actionCallBtn,
+.content.dark .homeContent .myServices .actionCallBtn {
+    filter: drop-shadow(0 0 2.5px rgba(238, 238, 238, 0.01));
 }
 .homeContent .aboutMe .actionCallBtn,
 .homeContent .myServices .actionCallBtn {
+    position: absolute;
+    bottom: 10%;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     filter: drop-shadow(0 0 2.5px rgba(0, 0, 0, 0.25));
+    transition: 0.5s;
 }
 .homeContent .aboutMe .actionCallBtn a,
 .homeContent .myServices .actionCallBtn a {
     position: relative;
     text-decoration: none;
-    width: 35%;
-    height: 25px;
-    text-align: center;
+    width: 55px;
+    height: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    margin: 0 15px;
+    color: #333;
+    text-align: center;
     border-radius: 15px;
-    background-color: rgba(3, 3, 3, 0.5);
+    transform: rotate(-45deg);
+    border: 1px solid #333;
+    box-shadow: -10px 5px 10px -10px rgb(3 3 3 / 5%) inset,
+        -10px 5px 10px -10px rgb(3 3 3 / 10%);
+    transition: 0.5s;
+}
+
+.content.dark .homeContent .aboutMe .actionCallBtn a,
+.content.dark .homeContent .myServices .actionCallBtn a {
+    box-shadow: -10px -5px 10px -10px rgb(238 238 238 / 5%) inset,
+        -10px -5px 10px -10px rgb(238 238 238 / 10%);
+}
+.content.English.dark .homeContent .aboutMe .actionCallBtn a,
+.content.English.dark .homeContent .myServices .actionCallBtn a {
+    box-shadow: 10px 5px 10px -10px rgb(238 238 238 / 5%) inset,
+        10px 5px 10px -10px rgb(238 238 238 / 10%);
+}
+.content.English .homeContent .aboutMe .actionCallBtn a,
+.content.English .homeContent .myServices .actionCallBtn a {
+    transform: rotate(45deg);
+    box-shadow: 10px 5px 10px -10px rgb(3 3 3 / 5%) inset,
+        10px 5px 10px -10px rgb(3 3 3 / 10%);
 }
 .homeContent .aboutMe .actionCallBtn a p,
 .homeContent .myServices .actionCallBtn a p {
@@ -300,5 +417,45 @@ body {
     width: 100%;
     top: 57.5%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+.homeContent .aboutMe .actionCallBtn a img,
+.homeContent .myServices .actionCallBtn a img {
+    width: 30px;
+    transition: 0.5s;
+}
+.homeContent .aboutMe .actionCallBtn a img.dark,
+.homeContent .myServices .actionCallBtn a img.dark {
+    display: none;
+}
+.content.dark .homeContent .aboutMe .actionCallBtn a img.light, 
+.content.dark .homeContent .myServices .actionCallBtn a img.light {
+    display: none;
+}
+.content.dark .homeContent .aboutMe .actionCallBtn a img.dark, 
+.content.dark .homeContent .myServices .actionCallBtn a img.dark {
+    display: block;
+}
+.homeContent .aboutMe .actionCallBtn a ion-icon,
+.homeContent .myServices .actionCallBtn a ion-icon {
+    font-size: 2.45em;
+}
+.homeContent .myServices .actionCallBtn a.twitter ion-icon {
+    transform: rotate(35deg);
+}
+.content.English .homeContent .myServices .actionCallBtn a.twitter ion-icon {
+    transform: rotate(20deg);
+}
+.homeContent .aboutMe .actionCallBtn a.whatsApp ion-icon {
+    transform: rotate(-45deg);
+}
+.content.English .homeContent .aboutMe .actionCallBtn a.whatsApp ion-icon {
+    transform: rotate(225deg);
+}
+.content.dark .homeContent .aboutMe .actionCallBtn a,
+.content.dark .homeContent .myServices .actionCallBtn a,
+.content.dark .homeContent .aboutMe .actionCallBtn a p,
+.content.dark .homeContent .myServices .actionCallBtn a p {
+    color: #eee;
 }

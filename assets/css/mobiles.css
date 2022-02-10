@@ -1,11 +1,17 @@
 @media only screen and (max-width: 480px) {
+    html {
+        overflow-y: scroll;
+    }
+    body {
+        overflow: scroll;
+    }
+    .content {
+    }
     .home .logo {
         margin: 50px 0;
     }
     .home img {
         width: 150px;
-    }
-    .home .homeContent {
     }
     .home .homeContent::-webkit-scrollbar {
         width: 0;
@@ -28,10 +34,25 @@
     .homeContent .aboutMe, 
     .homeContent .myServices {
         width: 75%;
+        height: fit-content;
         margin: 15px auto;
     }
-    .homeContent .aboutMe .actionCallBtn a, 
-    .homeContent .myServices .actionCallBtn a {
-        width: 50%;
+    .homeContent .myServices {
+        margin: 15px auto 125px !important;
+    }
+    .homeContent .aboutMe .personalityInfoContent, 
+    .homeContent .myServices .personalityInfoContent {
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+    .homeContent .aboutMe .actionCallBtn, 
+    .homeContent .myServices .actionCallBtn {
+        position: relative;
+        margin: 0 auto 15px;
+        justify-content: center;
+    }
+    .aboutMe .personalityInfoContent .textSection, 
+    .myServices .personalityInfoContent .textSection {
+        padding: 0 20px;
     }
 }
